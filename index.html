@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Management API</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <p class="eyebrow">Project 2 Backend API</p>
+      <h1>User Management API</h1>
+      <p class="lead">A simple frontend to test the backend GET and POST endpoints.</p>
+    </section>
+
+    <section class="stats" aria-label="Statistics">
+      <div class="stat-card">
+        <span class="stat-value" id="totalUsers">0</span>
+        <span class="stat-label">Total Users</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value status-dot" id="apiStatus">Offline</span>
+        <span class="stat-label">API Status</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-header">
+        <div>
+          <h2>User List</h2>
+          <p class="section-subtitle">All registered users</p>
+        </div>
+        <button type="button" id="loadUsersBtn" class="btn btn-secondary">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+          <span class="btn-label">Refresh</span>
+        </button>
+      </div>
+
+      <div class="users-list" id="usersList"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-header">
+        <div>
+          <h2>Add User</h2>
+          <p class="section-subtitle">Create a new user record</p>
+        </div>
+      </div>
+      <form id="userForm" class="user-form" novalidate>
+        <div class="field-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter name" required />
+          <span class="field-error" id="nameError"></span>
+        </div>
+        <div class="field-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter email" required />
+          <span class="field-error" id="emailError"></span>
+        </div>
+        <div class="actions">
+          <button type="submit" id="submitBtn" class="btn btn-primary">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+            <span class="btn-label">Add User</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="page-footer">
+      <p>Express.js REST API &middot; In-memory storage &middot; Data resets on restart</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

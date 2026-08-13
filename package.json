@@ -1,0 +1,24 @@
+{
+  "name": "project-2-backend-api",
+  "version": "1.0.0",
+  "description": "Project 2 backend API for user management.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "backend",
+    "frontend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
